@@ -1,36 +1,50 @@
-
 import { Layers, Gamepad2, Zap } from 'lucide-react';
 
-// --- CONFIGURATION ---
-// Change this to the path where your images are stored.
-// If using your live site: "https://cage5954-netizen.github.io/oneirism-website/assets"
-// If using local files: "/assets"
-const ASSETS_BASE_URL = "assets"; // Using local assets folder structure as requested
+// --- REAL ASSET IMPORTS ---
+import heroImg from "./assets/images/Lava Arena.png";                     // NEW HERO
+import spawnArenaImg from "./assets/images/Spawn-Area.png";
+import chainBridgeImg from "./assets/images/Chain Bridge.png";            // NEW SLOT
+import lightningTrapImg from "./assets/images/Lighting Axe from Above.png";
+
+import gameplay1Img from "./assets/images/Bridge Jump.png";
+import gameplay2Img from "./assets/images/Portal Room.png";
+
+import news1Img from "./assets/images/HighresScreenshot00018.png";
+import news2Img from "./assets/images/HighresScreenshot00020.png";
+import news3Img from "./assets/images/HighresScreenshot00023.png";
+
+import char1Img from "./assets/images/Protagonist.jpg";
+import char2Img from "./assets/images/The Forger.png";
+import char3Img from "./assets/images/Fireman.png";
+
+import trailerVideo from "./assets/videos/Oneirism New Opening.mp4";
+
+// ------------------------------
 
 export const SOCIAL_LINKS = {
   discord: "https://discord.gg/FrZkraDw",
   twitter: "https://x.com/44_mugen22381"
 };
 
-// MAP YOUR EXACT FILENAMES HERE
+// ------------------------------
+
 export const IMAGES = {
-  hero: `${ASSETS_BASE_URL}/images/Final Summit.png`, 
-  spawnArena: `${ASSETS_BASE_URL}/images/spawn-area.png`, 
-  verticalParkour: `${ASSETS_BASE_URL}/images/Parkour Pillars.png`,
-  lightningTrap: `${ASSETS_BASE_URL}/images/Lighting Axe from Above.png`,
-  // Using placeholders or reusing images if specific gameplay feature shots weren't provided in the last snippet
-  gameplay1: `${ASSETS_BASE_URL}/images/blue_cubes.jpg`, 
-  gameplay2: `${ASSETS_BASE_URL}/images/red_shards.jpg`, 
-  char1: `${ASSETS_BASE_URL}/character_dreamer.jpg`, 
-  char2: `${ASSETS_BASE_URL}/character_guardian.jpg`, 
-  char3: `${ASSETS_BASE_URL}/character_void.jpg`, 
-  news1: `${ASSETS_BASE_URL}/news_august.jpg`, 
-  news2: `${ASSETS_BASE_URL}/news_july.jpg`, 
-  news3: `${ASSETS_BASE_URL}/news_june.jpg`, 
+  hero: heroImg,                         // LAVA ARENA IS NOW HERO BACKGROUND
+  spawnArena: spawnArenaImg,
+  verticalParkour: chainBridgeImg,       // PARKOUR REMOVED → CHAIN BRIDGE REPLACES IT
+  lightningTrap: lightningTrapImg,
+  gameplay1: gameplay1Img,
+  gameplay2: gameplay2Img,
+  char1: char1Img,
+  char2: char2Img,
+  char3: char3Img,
+  news1: news1Img,
+  news2: news2Img,
+  news3: news3Img,
 };
 
 export const VIDEOS = {
-  trailer: `${ASSETS_BASE_URL}/videos/oneirism-new-opening.mp4`
+  trailer: trailerVideo
 };
 
 export const NAV_LINKS = [
@@ -49,24 +63,26 @@ export const MOTTO_LINES = [
   "Where dreams end."
 ];
 
+// --- GAMEPLAY HIGHLIGHTS ---------------
 export const GAMEPLAY_HIGHLIGHTS = [
   { 
     title: "Spawn & Obstacle Arena", 
     desc: "Navigating the initial lava-drenched obstacles.", 
-    img: IMAGES.spawnArena 
+    img: IMAGES.spawnArena
   },
   { 
-    title: "Vertical Parkour Zone", 
-    desc: "Ascending the shattered fragments of reality.", 
-    img: IMAGES.verticalParkour 
+    title: "Chain Bridge Crossing",          // UPDATED TITLE
+    desc: "Crossing suspended ruins over a dream abyss.",
+    img: IMAGES.verticalParkour              // Now CHAIN BRIDGE
   },
   { 
     title: "Lightning Axe Trap Event", 
     desc: "Timing-based survival sequences.", 
-    img: IMAGES.lightningTrap 
+    img: IMAGES.lightningTrap
   },
 ];
 
+// --- NEWS ITEMS -------------------------
 export const NEWS_ITEMS = [
   {
     id: 1,
@@ -79,7 +95,7 @@ export const NEWS_ITEMS = [
     id: 2,
     title: "High-res screenshots uploaded",
     date: "July 2025",
-    excerpt: "New visuals from the latest test build featuring the Vertical Parkour Zone and Lava regions.",
+    excerpt: "New visuals from the latest test build featuring the Chain Bridge Zone and Lava regions.",
     image: IMAGES.news2
   },
   {
@@ -91,6 +107,7 @@ export const NEWS_ITEMS = [
   }
 ];
 
+// --- CHARACTERS -------------------------
 export const CHARACTERS = [
   {
     name: "The Dreamer",
@@ -99,20 +116,20 @@ export const CHARACTERS = [
     image: IMAGES.char1
   },
   {
-    name: "The Guardian",
-    role: "Obstacle",
-    desc: "Manifestations of the subconscious trying to wake you up—or keep you asleep forever.",
+    name: "The Forger",
+    role: "Sentience",
+    desc: "Something that reshapes the terrain around your movement.",
     image: IMAGES.char2
   },
   {
-    name: "The Void",
-    role: "Environment",
-    desc: "The ever-consuming darkness that eats the edges of the map if you linger too long.",
+    name: "Fireman",
+    role: "Manifestation",
+    desc: "A flickering echo from the burn. You never see the same silhouette twice.",
     image: IMAGES.char3
   }
 ];
 
-// Animation Variants for Page Transitions
+// --- PAGE TRANSITION VARIANTS ----------
 export const PAGE_VARIANTS = {
   initial: { 
     opacity: 0, 
@@ -125,7 +142,7 @@ export const PAGE_VARIANTS = {
     scale: 1,
     transition: { 
       duration: 0.6, 
-      ease: [0.22, 1, 0.36, 1] as [number, number, number, number] // Custom ease-out cubic
+      ease: [0.22, 1, 0.36, 1] 
     } 
   },
   exit: { 
@@ -134,7 +151,7 @@ export const PAGE_VARIANTS = {
     scale: 1.02,
     transition: { 
       duration: 0.4, 
-      ease: [0.22, 1, 0.36, 1] as [number, number, number, number] 
+      ease: [0.22, 1, 0.36, 1] 
     } 
   }
 };
