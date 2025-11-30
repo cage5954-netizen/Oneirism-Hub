@@ -1,71 +1,125 @@
+
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
+import { PAGE_VARIANTS } from '../constants';
 
 const About: React.FC = () => {
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const sectionVariants: Variants = {
+    hidden: { opacity: 0, y: 30, filter: 'blur(8px)' },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      filter: 'blur(0px)',
+      transition: { duration: 0.8, ease: "easeOut" }
+    }
+  };
+
   return (
-    <div className="pt-12 pb-24 px-6 max-w-4xl mx-auto">
+    <motion.div 
+      variants={PAGE_VARIANTS}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      className="pt-24 pb-24 px-6 max-w-4xl mx-auto"
+    >
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="space-y-24"
       >
-        <h1 className="text-4xl md:text-6xl font-cinematic font-bold text-white mb-12 border-b border-white/10 pb-6">
-          BORN FROM A <span className="text-oneirism-orange">BURN</span>
-        </h1>
-        
-        <div className="prose prose-invert prose-lg max-w-none space-y-12">
-          {/* Origin Story */}
-          <section>
-            <p className="text-slate-300 leading-relaxed text-lg">
-              Oneirism began about a year and a half ago. At the first year of university, I was having troubles with sleeping long hours. 
-              I accidentally burned my left hand one evening. The sharp pain lingered as I drifted into a medicated sleep, and I was pulled into a 
-              vivid, relentless series of dreams — a surreal, lava-drenched world where familiar objects and echoes of my past flickered like 
-              half-remembered memories.
+        {/* Origin Story */}
+        <motion.section variants={sectionVariants}>
+          <h1 className="text-4xl md:text-6xl font-cinematic font-bold text-white mb-10 border-b border-white/10 pb-6 relative inline-block">
+            BORN FROM A <span className="text-oneirism-orange">BURN</span>
+            <motion.div 
+              initial={{ width: 0 }}
+              animate={{ width: '33%' }}
+              transition={{ delay: 0.5, duration: 1 }}
+              className="absolute bottom-0 left-0 h-[2px] bg-oneirism-orange" 
+            />
+          </h1>
+          
+          <div className="prose prose-invert prose-lg max-w-none space-y-6 text-slate-300 font-light leading-relaxed">
+            <p>
+              Oneirism wasn’t conceived as a story — it was sparked by an event, a single moment of searing clarity that split wakefulness from dream. Somewhere between pain and sleep, a world surfaced: molten, shifting, stitched together from fragments that didn’t quite belong. Objects half-remembered. Places never visited. Echoes without sources.
             </p>
-            <p className="text-slate-300 leading-relaxed text-lg mt-4">
-              When I woke, the burn’s sting clung to me, but then the discomfort ignited something. Later on, I found out there's the existence of 
-              <span className="text-oneirism-orange font-bold"> “oneirism”</span>: a state where someone is caught in a chain of dreams, 
-              semi-aware of their unreality yet anchored by a heavy, drowsy fog that blocks escape from sleep, endlessly cycling through shifting dreamscapes.
+            <p className="italic text-slate-400 pl-6 border-l border-white/20">
+              A landscape built from the logic of dreams, indifferent to explanation.
             </p>
-            <p className="text-slate-300 leading-relaxed text-lg mt-4">
-              Now I don't know if I fully experienced this, but I felt a shred of resemblance to what it's trying to say. It compelled me to find a way 
-              to recreate that experience — to shape it, render it, and walk through it. Unreal Engine 5 felt like the only tool I needed. 
-              I didn’t plan for this to become a “project.” It just... evolved. One sequence, one obstacle, one feeling at a time.
+            <p>
+              Later came the word <span className="text-oneirism-orange font-semibold">oneirism</span> — a state where someone drifts through chained dreams, aware enough to notice the seams yet unable to break free from the fog that binds them. That definition became the anchor. The rest grew around it.
             </p>
-          </section>
+            <p>
+              Oneirism didn’t begin as a “project.” It unfolded on its own terms. A sequence became an idea; an idea became a path; the path kept rearranging itself. What exists now is simply what the dream insisted on becoming.
+            </p>
+          </div>
+        </motion.section>
 
-          {/* Philosophy */}
-          <section className="bg-white/5 p-8 rounded-xl border border-white/5">
-            <h2 className="text-2xl font-cinematic font-bold text-white mb-4 uppercase tracking-wider">What It's Trying To Be</h2>
-            <p className="text-slate-400 mb-4">
-              Oneirism isn’t trying to be a game in the traditional sense. <span className="text-white font-bold">There are no enemies.</span> No tutorials. 
-              No pop-ups telling you what to do. It’s more of a surreal traversal gauntlet — a sensory sketchbook of movement, perception, and dream-logic.
+        {/* Philosophy */}
+        <motion.section 
+          variants={sectionVariants}
+          className="bg-white/5 p-10 rounded-sm border-l-2 border-oneirism-orange backdrop-blur-sm relative overflow-hidden group"
+        >
+          {/* Subtle glow effect on hover */}
+          <div className="absolute top-0 right-0 p-32 bg-oneirism-orange/5 blur-3xl rounded-full pointer-events-none group-hover:bg-oneirism-orange/10 transition-colors duration-1000" />
+          
+          <h2 className="text-3xl font-cinematic font-bold text-white mb-8 uppercase tracking-widest relative z-10">What It’s Trying To Be</h2>
+          
+          <div className="space-y-8 text-slate-300 text-lg relative z-10">
+            <p className="font-medium text-white border-l-2 border-white/20 pl-4">
+              Oneirism isn’t a traditional game.
+              <br />
+              There are no enemies. No guidance. No prompts.
+              <br />
+              Nothing is here to teach you what to do.
             </p>
-            <p className="text-slate-400">
-              Every element exists to ask a question, not give an answer. The world doesn’t explain itself — but it responds to you. It watches. It shifts. 
-              Sometimes it repeats. It’s not trying to be fair. It’s trying to be honest.
+            <p>
+              It’s a surreal traversal — a sketchbook of movement, perception, and dream-logic. Every element is designed to suggest, not explain; to respond, not to direct. The world doesn’t speak plainly, but it watches. It shifts. It remembers.
             </p>
-          </section>
+            <p className="text-oneirism-orange/90 font-cinematic text-2xl pt-2">
+              Sometimes it repeats. Sometimes it misleads.
+              <br />
+              It isn’t trying to be fair.
+              <br />
+              It’s trying to be honest.
+            </p>
+          </div>
+        </motion.section>
 
-          {/* Technical Info */}
-          <section>
-            <h2 className="text-2xl font-cinematic font-bold text-white mb-4 uppercase tracking-wider">Making It Real</h2>
-            <p className="text-slate-300">
+        {/* Technical Info */}
+        <motion.section variants={sectionVariants}>
+          <h2 className="text-2xl font-cinematic font-bold text-white mb-6 uppercase tracking-wider flex items-center gap-4">
+            Making It Real <div className="h-[1px] flex-grow bg-white/10" />
+          </h2>
+          <div className="space-y-4 text-slate-400">
+            <p>
               The game was built using UE5’s Blueprint scripting, Niagara VFX, and motion-matching tools. Development was iterative — new mechanics were added, 
               tested, and refined as ideas evolved.
             </p>
-            <p className="text-slate-300 mt-4">
+            <p>
               Visual elements were frequently revised or removed entirely if they didn’t serve the intended feeling. Each feature, camera cut, and traversal event 
               was tested until the environment felt responsive and deliberate.
             </p>
-            <p className="text-slate-300 mt-4 italic border-l-2 border-oneirism-orange pl-4">
+            <p className="italic text-slate-500 text-sm mt-6">
               Oneirism remains a work-in-progress, but at its core, it’s a consistent effort to simulate dreamlike logic using responsive level design and 
               real-time rendering.
             </p>
-          </section>
-        </div>
+          </div>
+        </motion.section>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 
