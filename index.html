@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oneirism</title>
+    
+    <!-- Tailwind CDN for styling (Consider migrating to PostCSS/npm for better performance later) -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
+    
     <script>
       tailwind.config = {
         theme: {
@@ -15,10 +19,10 @@
             colors: {
               oneirism: {
                 orange: '#ff5722',
-                dark: '#050507', // Restored Deep Blue-Black
+                dark: '#050507',
                 darker: '#020203',
                 accent: '#ff7043',
-                purple: '#1a1a2e', // Restored Deep Cool Purple
+                purple: '#1a1a2e',
                 fog: '#0f0f1a'
               }
             },
@@ -92,12 +96,12 @@
   <script type="importmap">
 {
   "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
     "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
     "clsx": "https://aistudiocdn.com/clsx@^2.1.1"
   }
 }
@@ -105,5 +109,7 @@
 </head>
   <body>
     <div id="root"></div>
+    <!-- CRITICAL: This connects your React code to the HTML -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
