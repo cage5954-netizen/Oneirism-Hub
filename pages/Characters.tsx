@@ -19,10 +19,10 @@ const Characters: React.FC = () => {
     >
       <div className="text-center mb-32">
         <h1 className="text-5xl md:text-8xl font-cinematic font-black text-white mb-6 uppercase tracking-[0.05em] drop-shadow-2xl">
-          Faces of the <span className="text-transparent bg-clip-text bg-gradient-to-br from-oneirism-orange to-red-900">Void</span>
+          Faces of the <span className="text-transparent bg-clip-text bg-gradient-to-br from-oneirism-orange to-red-900">World</span>
         </h1>
         <p className="text-slate-500 text-sm md:text-lg tracking-[0.4em] uppercase font-light">
-          Fragments of a shattered psyche
+          A set of recurring characters
         </p>
       </div>
 
