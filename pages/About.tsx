@@ -52,16 +52,16 @@ const About: React.FC = () => {
           
           <div className="prose prose-invert prose-lg max-w-none space-y-6 text-slate-300 font-light leading-relaxed">
             <p>
-              Oneirism wasn’t conceived as a story — it was sparked by an event, a single moment of searing clarity that split wakefulness from dream. Somewhere between pain and sleep, a world surfaced: molten, shifting, stitched together from fragments that didn’t quite belong. Objects half-remembered. Places never visited. Echoes without sources.
+              Oneirism began when a burn injury prompted me to think differently about perception and narrative continuity. Since then, the project has grown through a range of other influences and continued exploration. The result is a world built from connected pieces rather than a single linear story.
             </p>
             <p className="italic text-slate-400 pl-6 border-l border-white/20">
-              A landscape built from the logic of dreams, indifferent to explanation.
+              A landscape welded together by dream-like logic, where coherence emerges without explicit explanation
             </p>
             <p>
-              Later came the word <span className="text-oneirism-orange font-semibold">oneirism</span> — a state where someone drifts through chained dreams, aware enough to notice the seams yet unable to break free from the fog that binds them. That definition became the anchor. The rest grew around it.
+              The word <span className="text-oneirism-orange font-semibold">oneirism</span> refers to a state of awareness within layered dreams, where structure is sensed before it is understood. This idea provided an anchor.
             </p>
             <p>
-              Oneirism didn’t begin as a “project.” It unfolded on its own terms. A sequence became an idea; an idea became a path; the path kept rearranging itself. What exists now is simply what the dream insisted on becoming.
+              Individual sequences were made independently and later connected, with structure forming gradually through testing and refinement.
             </p>
           </div>
         </motion.section>
@@ -78,21 +78,21 @@ const About: React.FC = () => {
           
           <div className="space-y-8 text-slate-300 text-lg relative z-10">
             <p className="font-medium text-white border-l-2 border-white/20 pl-4">
-              Oneirism isn’t a traditional game.
+              Oneirism is structured as an exploratory experience
               <br />
-              There are no enemies. No guidance. No prompts.
+              There are no enemies, guidance is indirect.
               <br />
-              Nothing is here to teach you what to do.
+              Nothing here tells you exactly what to do.
             </p>
             <p>
-              It’s a surreal traversal — a sketchbook of movement, perception, and dream-logic. Every element is designed to suggest, not explain; to respond, not to direct. The world doesn’t speak plainly, but it watches. It shifts. It remembers.
+              Movement is central to the experience. Spaces respond subtly, encouraging exploration through motion rather than instruction.
             </p>
             <p className="text-oneirism-orange/90 font-cinematic text-2xl pt-2">
-              Sometimes it repeats. Sometimes it misleads.
+              The world doesn't guide you step by step.
               <br />
-              It isn’t trying to be fair.
+              Patterns emerge through repetition.
               <br />
-              It’s trying to be honest.
+              Meaning is something you notice, not something you're told.
             </p>
           </div>
         </motion.section>
@@ -104,7 +104,7 @@ const About: React.FC = () => {
           </h2>
           <div className="space-y-4 text-slate-400">
             <p>
-              The game was built using UE5’s Blueprint scripting, Niagara VFX, and motion-matching tools. Development was iterative — new mechanics were added, 
+              This is built using UE5’s Blueprint scripting, Niagara VFX, and motion-matching tools. Development follows an iterative process, with new mechanics were added, 
               tested, and refined as ideas evolved.
             </p>
             <p>
