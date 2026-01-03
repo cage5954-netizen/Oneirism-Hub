@@ -57,10 +57,10 @@ export const NAV_LINKS = [
 ];
 
 export const MOTTO_LINES = [
-  "Then where are my dreams?",
-  "Beyond where reality lies.",
-  "Then where is my reality?",
-  "Where dreams end."
+  "Dreams resist clear beginnings and endings",
+  "Nothing can be explained",
+  "Memory fills in the gaps",
+  "Meaning settles later"
 ];
 
 // --- GAMEPLAY HIGHLIGHTS ---------------
