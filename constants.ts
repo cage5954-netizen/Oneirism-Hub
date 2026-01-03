@@ -86,23 +86,23 @@ export const GAMEPLAY_HIGHLIGHTS = [
 export const NEWS_ITEMS = [
   {
     id: 1,
-    title: "Site goes live! Welcome to Oneirism.",
+    title: "Site goes live!",
     date: "Aug 2025",
-    excerpt: "The official portal for the dreamscape is now online. Welcome to the initial build.",
+    excerpt: "Welcome to the initial build.",
     image: IMAGES.news1
   },
   {
     id: 2,
     title: "High-res screenshots uploaded",
     date: "July 2025",
-    excerpt: "New visuals from the latest test build featuring the Chain Bridge Zone and Lava regions.",
+    excerpt: "New visuals from the latest test build featuring the chain bridge zone and lava regions.",
     image: IMAGES.news2
   },
   {
     id: 3,
     title: "Lightning Axe sequence integrated",
     date: "June 2025",
-    excerpt: "Successfully implemented the dynamic Lightning Axe trap event. Timing is everything.",
+    excerpt: "Implemented the dynamic Lightning Axe Trap event.",
     image: IMAGES.news3
   }
 ];
@@ -110,21 +110,21 @@ export const NEWS_ITEMS = [
 // --- CHARACTERS -------------------------
 export const CHARACTERS = [
   {
-    name: "The Dreamer",
+    name: "Observer",
     role: "Protagonist",
-    desc: "A vessel for the player's consciousness, navigating the burn-induced fever dream.",
+    desc: "The point of view through which the world is experienced.",
     image: IMAGES.char1
   },
   {
-    name: "The Forger",
-    role: "Sentience",
-    desc: "Something that reshapes the terrain around your movement.",
+    name: "Node",
+    role: "Attunement",
+    desc: "A responsive point of continuity that registers progress and allows return.",
     image: IMAGES.char2
   },
   {
     name: "Fireman",
     role: "Manifestation",
-    desc: "A flickering echo from the burn. You never see the same silhouette twice.",
+    desc: "A flickering echo from the burn.",
     image: IMAGES.char3
   }
 ];
