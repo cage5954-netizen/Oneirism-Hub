@@ -22,7 +22,7 @@ import trailerVideo from "./assets/videos/Oneirism New Opening.mp4";
 // ------------------------------
 
 export const SOCIAL_LINKS = {
-  discord: "https://discord.gg/FrZkraDw",
+  discord: "https://discord.gg/jYUhHHEPVT",
   twitter: "https://x.com/44_mugen22381"
 };
 
