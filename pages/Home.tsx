@@ -287,7 +287,7 @@ const Home: React.FC = () => {
                 {/* Footer UI */}
                 {!isPlaying && (
                     <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black/80 to-transparent flex items-center gap-4 text-xs font-mono text-slate-300 z-30 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                        <span className="text-oneirism-orange font-bold uppercase tracking-widest">Official Gameplay Trailer</span>
+                        <span className="text-oneirism-orange font-bold uppercase tracking-widest">Opening Scene</span>
                         <div className="flex-grow h-[1px] bg-white/20"><div className="w-1/3 h-full bg-oneirism-orange shadow-[0_0_10px_#ff5722]"></div></div>
                     </div>
                 )}
