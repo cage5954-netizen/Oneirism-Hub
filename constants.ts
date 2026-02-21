@@ -17,7 +17,7 @@ import char1Img from "./assets/images/Protagonist.jpg";
 import char2Img from "./assets/images/The Forger.png";
 import char3Img from "./assets/images/Fireman.png";
 
-import trailerVideo from "./assets/videos/Oneirism New Opening.mp4";
+import trailerVideo from "./assets/videos/Oneirism_Trailer.mp4";
 
 // ------------------------------
 
